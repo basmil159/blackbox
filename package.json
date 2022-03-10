@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "concat": "^1.0.3",
-    "live-server": "^1.2.1"
+    "live-server": "^1.1.0"
   }
 }

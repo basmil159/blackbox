@@ -16,11 +16,13 @@
     justify-content: space-between;
     align-items: center;
     min-width: 17vw;
+    animation: moveInLeft 1s ease-in-out;
   }
 
   &__user {
     display: flex;
     align-items: center;
+    animation: moveInRightRough 1s ease-in-out;
 
     &--img {
       margin-right: 0.5rem;

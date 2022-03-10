@@ -42,7 +42,7 @@
     }
 
     span {
-      animation: 1s toggleLeft 1s linear infinite;
+      animation: 1s toggleLeft 1s ease-in-out infinite;
     }
   }
 

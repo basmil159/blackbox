@@ -37,7 +37,8 @@ main {
   grid-template-columns: min-content 1fr;
   grid-template-rows: max-content 1fr;
   position: relative;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  overflow-x: hidden; }
   @media only screen and (max-width: 56.25em) {
     main {
       grid-template-columns: 1fr; } }
@@ -63,6 +64,16 @@ main {
     transform: translateX(-10rem); }
   80% {
     transform: translateX(2rem); }
+  100% {
+    opacity: +1;
+    transform: translateX(0rem); } }
+
+@keyframes moveInRightRough {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
   100% {
     opacity: +1;
     transform: translateX(0rem); } }
@@ -250,7 +261,8 @@ a {
   background-color: #fff; }
   .table__head {
     margin-top: 3rem;
-    width: 100vw; }
+    width: 100vw;
+    animation: moveInUp 1s ease-in-out; }
     .table__head--filter {
       display: flex;
       justify-content: space-around;
@@ -258,6 +270,7 @@ a {
       .table__head--filter svg {
         margin-left: 2rem; }
   .table td {
+    animation: moveInRightRough 1s ease-in-out;
     border: 1px solid #f0f0f0; }
     .table td a {
       color: #0072bc;
@@ -304,6 +317,7 @@ a {
       fill: #0072bc; }
 
 .job {
+  animation: moveInRight 1s ease-in-out;
   height: 100%;
   background-color: #fafafa;
   padding: 1.5rem 2rem;
@@ -407,7 +421,7 @@ a {
         background: #fff;
         box-shadow: 5px 5px 6px #0072bc1a; } }
   .toggle__sidebar span {
-    animation: 1s toggleLeft 1s linear infinite; }
+    animation: 1s toggleLeft 1s ease-in-out infinite; }
 
 .toggle__navigation {
   position: absolute;
@@ -486,10 +500,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 17vw; }
+    min-width: 17vw;
+    animation: moveInLeft 1s ease-in-out; }
   .header__user {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    animation: moveInRightRough 1s ease-in-out; }
     .header__user--img {
       margin-right: 0.5rem; }
     .header__user--title {

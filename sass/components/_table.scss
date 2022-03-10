@@ -7,6 +7,7 @@
   &__head {
     margin-top: 3rem;
     width: 100vw;
+    animation: moveInUp 1s ease-in-out;
 
     &--filter {
       display: flex;
@@ -20,6 +21,7 @@
   }
 
   td {
+    animation: moveInRightRough 1s ease-in-out;
     border: 1px solid $color-grey-light-2;
 
     a {

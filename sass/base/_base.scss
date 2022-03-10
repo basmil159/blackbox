@@ -41,6 +41,7 @@ main {
   grid-template-rows: max-content 1fr;
   position: relative;
   transition: all 0.3s ease;
+  overflow-x: hidden;
 
   @include respond(tab-port) {
     grid-template-columns: 1fr;
