@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Saira:wght@600&display=swap");
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f4f6fb;
+  color: $color-grey-dark-3;
+}
+
+.heading-primary {
+  font-family: "Saira", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.heading-secondary {
+  font-family: DM Sans;
+
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  /* identical to box height */
+  color: #747474;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.3rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: normal;
+  color: $color-grey-dark-2;
+  display: inline-block;
+
+  @include respond(tab-port) {
+    font-size: 1.4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.2rem;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+}

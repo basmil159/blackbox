@@ -1,0 +1,23 @@
+.active {
+  color: $color-primary !important;
+}
+
+//for similar padding on all the body part of the dashboard
+.dashboardbody {
+  margin: 1.9rem;
+}
+
+// for all the svg icons height and width
+.tiny-svg {
+  @include svgs(1.6rem, 1.6rem);
+  fill: $color-black;
+}
+.small-svg {
+  @include svgs(2rem, 2rem);
+}
+.medium-svg {
+  @include svgs(2.4rem, 2.4rem);
+}
+.big-svg {
+  @include svgs(3.2rem, 3.2rem);
+}
