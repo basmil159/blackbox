@@ -5,6 +5,9 @@
 //for similar padding on all the body part of the dashboard
 .dashboardbody {
   margin: 1.9rem;
+  @include respond(phone) {
+    margin: 0;
+  }
 }
 
 // for all the svg icons height and width
