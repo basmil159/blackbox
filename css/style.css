@@ -149,6 +149,9 @@ a {
 
 .dashboardbody {
   margin: 1.9rem; }
+  @media only screen and (max-width: 37.5em) {
+    .dashboardbody {
+      margin: 0; } }
 
 .tiny-svg {
   height: 1.6rem;
@@ -279,7 +282,7 @@ a {
       .table th,
       .table td {
         font-size: 1rem;
-        padding: 0.2; } }
+        padding: 0.5rem 0.1rem; } }
   .table th {
     position: sticky;
     text-align: center;
@@ -290,14 +293,14 @@ a {
     background-color: #d6e9f5; }
   .table tr:nth-child(even) {
     background-color: #fafafa; }
-  .table tr:hover {
+  .table tbody tr:hover {
     background-color: #e4e4e4; }
-    .table tr:hover td {
+    .table tbody tr:hover td {
       color: #0072bc;
       transform: scale(1.05);
       z-index: 1;
       margin-top: -1rem; }
-    .table tr:hover svg {
+    .table tbody tr:hover svg {
       fill: #0072bc; }
 
 .job {
@@ -573,4 +576,4 @@ a {
     word-break: keep-all; }
     .logs__message a {
       white-space: nowrap;
-      margin-left: 1rem; }
+      margin-left: 0.5rem; }

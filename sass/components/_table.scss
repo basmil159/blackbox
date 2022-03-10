@@ -46,7 +46,7 @@
     }
     @include respond(phone) {
       font-size: 1rem;
-      padding: 0.2;
+      padding: 0.5rem 0.1rem;
     }
   }
   th {
@@ -63,7 +63,7 @@
     background-color: $color-grey-light;
   }
 
-  tr:hover {
+  tbody tr:hover {
     background-color: $color-grey-light-3;
     td {
       color: $color-primary;
