@@ -26,44 +26,16 @@
 
     &--img {
       margin-right: 0.5rem;
+      width: 3.2rem;
+
+      @include respond(tab-port) {
+        width: 2.5rem;
+      }
     }
     &--title {
       color: $color-grey-light-2;
       font-style: normal;
       font-weight: normal;
     }
-  }
-
-  &__menu {
-    position: relative;
-    display: inline-block;
-    margin-left: 1.5rem;
-
-    &::before {
-      top: -0.9rem;
-    }
-    &::after {
-      top: 0.9rem;
-    }
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
-    }
-  }
-  &__menu,
-  &__menu::before,
-  &__menu::after {
-    width: 2.4rem;
-    height: 0.3rem;
-    background-color: #fff;
-    display: inline-block;
-  }
-
-  &__checkbox:checked + section.sidebar {
-    width: 100vw;
-    opacity: 1;
   }
 }

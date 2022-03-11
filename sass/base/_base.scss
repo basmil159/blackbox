@@ -29,7 +29,10 @@ body {
   background-color: $color-grey-light;
   box-sizing: border-box;
   padding: 0;
+  font-family: DM Sans;
 }
+
+// for text selection
 ::selection {
   color: $color-primary;
   background-color: $color-primary-light;
