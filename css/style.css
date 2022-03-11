@@ -152,6 +152,7 @@ a {
   color: #0072bc !important; }
 
 .dashboardbody {
+  height: calc(100vh - 12rem);
   margin: 1.9rem; }
   @media only screen and (max-width: 37.5em) {
     .dashboardbody {
