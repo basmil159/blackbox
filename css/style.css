@@ -152,11 +152,11 @@ a {
   color: #0072bc !important; }
 
 .dashboardbody {
-  height: calc(100vh - 12rem);
-  margin: 1.9rem; }
+  height: calc(100vh - 8rem);
+  padding: 1.9rem; }
   @media only screen and (max-width: 37.5em) {
     .dashboardbody {
-      margin: 0; } }
+      padding: 0.2rem; } }
 
 .tiny-svg {
   height: 1.6rem;
