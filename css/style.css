@@ -312,7 +312,7 @@ a {
     text-transform: capitalize;
     z-index: 1;
     word-break: keep-all;
-    top: -0.1rem;
+    top: -2rem;
     background-color: #d6e9f5; }
   .table tr:nth-child(even) {
     background-color: #fafafa; }
