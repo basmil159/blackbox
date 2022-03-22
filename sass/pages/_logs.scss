@@ -1,6 +1,8 @@
 .logs {
   @include table-page;
 
+  @include dashboardbody;
+
   &__message {
     display: flex;
     justify-content: space-between;

@@ -12,11 +12,9 @@
     <main id="main">
       <!-- header -->
       <header id="header" class="header">
-        <div class="header__logo-box">
-          <a href="index.html"
-            ><h1 class="header__logo heading-primary">BlackBox</h1></a
-          >
-        </div>
+        <a href="index.html" class="header__logo-box">
+          <h1 class="header__logo heading-primary">BlackBox</h1>
+        </a>
         <div class="header__user">
           <img
             class="header__user--img"
@@ -24,7 +22,7 @@
             width="35"
             alt="admin"
           />
-          <h2 class="header__user--title heading-secondary">Harry Potter</h2>
+          <h2 class="header__user--title">Harry Potter</h2>
           <svg class="medium-svg">
             <use xlink:href="img/blackbox.svg#arrow-down"></use>
           </svg>
@@ -44,7 +42,6 @@
         <label for="menu__toggle" class="toggle__sidebar">
           <span>&gt;&gt;</span>
         </label>
-
         <div id="navigation" class="navigation">
           <label for="menu__toggle" class="toggle__navigation">
             <span>x</span>
@@ -96,10 +93,10 @@
               <input type="checkbox" id="auto-detect" style="display: none" />
               <label for="auto-detect" class="navigation__nav--btn">
                 <span class="navigation__nav--hide-on-tab"> Auto detect </span>
-                <svg class="big-svg on">
+                <svg class="big-svg">
                   <use xlink:href="img/blackbox.svg#toggle-on"></use>
                 </svg>
-                <svg class="big-svg off" style="display: none">
+                <svg class="big-svg" style="display: none">
                   <use xlink:href="img/blackbox.svg#toggle-off"></use>
                 </svg>
               </label>
@@ -110,7 +107,7 @@
       <!-- sidebar end -->
 
       <!-- Body start -->
-      <section class="tools dashboardbody">
+      <section class="tools">
         <table class="table">
           <thead class="table__head">
             <tr>
@@ -159,7 +156,7 @@
                 </svg>
               </td>
               <td>
-                <span class="tools__checkbox tools__checkbox--checked">
+                <span class="tools__checkbox--checked">
                   <svg class="tiny-svg">
                     <use xlink:href="img/blackbox.svg#tick"></use>
                   </svg>

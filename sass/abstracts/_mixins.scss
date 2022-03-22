@@ -38,6 +38,15 @@
     } //devices width 1800px
   }
 }
+
+//for similar padding on all the body part of the dashboard
+@mixin dashboardbody {
+  margin: 1.9rem;
+  @include respond(phone) {
+    margin: 0;
+  }
+}
+
 //responsive height and with for svg icons
 @mixin svgs($height, $width) {
   height: $height;

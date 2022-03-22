@@ -20,6 +20,12 @@
       text-transform: uppercase;
     }
 
+    &--to-do,
+    &--progress,
+    &--done {
+      margin-bottom: 1rem;
+    }
+
     &--to-do {
       background-color: $color-grey-dark;
     }
@@ -36,7 +42,7 @@
   }
   &__status-list {
     padding: 1.6rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     background-color: #fff;
     border: 1px solid #e4e4e4;
     box-sizing: border-box;

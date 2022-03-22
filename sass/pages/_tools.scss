@@ -1,11 +1,15 @@
 .tools {
   @include table-page;
+
+  @include dashboardbody;
+
   &__checkbox {
     background-color: $color-grey-light-2;
     height: 2.4rem;
     width: 2.4rem;
     align-items: center;
     display: block;
+    margin: 0 auto;
     position: relative;
 
     svg {
@@ -16,6 +20,7 @@
       transform: translate(-50%, -50%);
     }
     &--checked {
+      @extend .tools__checkbox;
       svg {
         display: block;
       }
