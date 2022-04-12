@@ -224,7 +224,7 @@ a {
       position: relative;
       white-space: nowrap;
       margin: 2rem 0;
-      padding: 0.8rem 4.5rem;
+      padding: 0.8rem 0.5rem;
       transition: color, transform 0.45s ease-in-out; }
       @media only screen and (max-width: 78.12em) {
         .navigation__nav li {
@@ -323,12 +323,91 @@ a {
     .table tbody tr:hover svg {
       fill: #0072bc; }
 
+.jobs {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+  overflow: auto;
+  margin: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .jobs {
+      margin: 0; } }
+  .jobs__delete-confirm {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 50rem;
+    background-color: #fafafa;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .jobs__delete-confirm h2 {
+      font-weight: 700;
+      font-size: 2rem; }
+    .jobs__delete-confirm--buttons {
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between; }
+      .jobs__delete-confirm--buttons button {
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        padding: 0.5rem 1.5rem;
+        background-color: #0072bc; }
+        .jobs__delete-confirm--buttons button:hover {
+          background-color: #00568e; }
+        .jobs__delete-confirm--buttons button:active {
+          background-color: #07377e; }
+
 .job {
   animation: moveInRight 1s ease-in-out;
   height: 100%;
   background-color: #fafafa;
   padding: 1.5rem 2rem;
   border: 1px solid #e4e4e4; }
+  .job__delete-confirm {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 50rem;
+    background-color: #fafafa;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .job__delete-confirm h2 {
+      font-weight: 700;
+      font-size: 2rem; }
+    .job__delete-confirm--buttons {
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: center; }
+      .job__delete-confirm--buttons span {
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        background-color: #0072bc; }
+        .job__delete-confirm--buttons span:hover {
+          background-color: #00568e; }
+        .job__delete-confirm--buttons span:active {
+          background-color: #07377e; }
   .job__status {
     display: flex;
     align-items: center;
@@ -357,19 +436,23 @@ a {
     border: 1px solid #e4e4e4;
     box-sizing: border-box;
     border-radius: 8px;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     row-gap: 1.2rem;
-    grid-template-rows: repeat(2, 1fr);
     min-height: 8.7rem; }
-    .job__status-list--add {
-      grid-template-columns: min-content 1fr min-content; }
-    .job__status-list--progress, .job__status-list--done {
-      grid-template-columns: 1fr min-content; }
     .job__status-list--priority, .job__status-list--text {
       align-self: center;
       justify-self: start;
       margin-right: 1rem;
       grid-row: 1/-1; }
+    .job__status-list--text {
+      display: block; }
+      .job__status-list--text p {
+        margin-top: 1rem; }
+    .job__status-list--delete-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
     .job__status-list--text {
       display: block; }
       .job__status-list--text p {
@@ -390,6 +473,12 @@ a {
       .job__status-add--btn svg {
         fill: #0072bc;
         margin-right: 0.8rem; }
+
+.job #delete-job:checked ~ .job__delete-confirm {
+  display: flex; }
+
+.job #close-delete:checked ~ .job__delete-confirm {
+  display: none; }
 
 .toggle__sidebar {
   position: absolute;
@@ -513,18 +602,44 @@ a {
     animation: moveInLeft 1s ease-in-out; }
   .header__user {
     display: flex;
-    align-items: center;
-    animation: moveInRightRough 1s ease-in-out; }
-    .header__user--img {
-      margin-right: 0.5rem;
-      width: 3.2rem; }
-      @media only screen and (max-width: 56.25em) {
-        .header__user--img {
-          width: 2.5rem; } }
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    animation: moveInRightRough 1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem; }
+    .header__user:hover {
+      background-color: #f4f6fb; }
+      .header__user:hover h2 {
+        color: #0072bc; }
+      .header__user:hover svg {
+        fill: #0072bc; }
+    .header__user--dropdown {
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.08);
+      background-color: #f4f6fb;
+      position: absolute;
+      right: 0rem;
+      display: none;
+      top: 100%;
+      width: 100%; }
+      .header__user--dropdown ul {
+        list-style: none; }
+        .header__user--dropdown ul li {
+          padding: 1rem;
+          color: #a0a0a0;
+          font-size: 1.5rem; }
+          .header__user--dropdown ul li:hover {
+            background-color: #0072bc;
+            color: #fff; }
     .header__user--title {
       color: #f0f0f0;
       font-style: normal;
       font-weight: normal; }
+
+.header__user:hover .header__user--dropdown,
+.header__user:hover .header__user--dropdown {
+  display: block; }
 
 .sidebar {
   left: 0;
@@ -539,17 +654,6 @@ a {
       position: fixed;
       width: 0rem; } }
 
-.jobs {
-  margin-bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 2rem;
-  overflow: auto;
-  margin: 1.9rem; }
-  @media only screen and (max-width: 37.5em) {
-    .jobs {
-      margin: 0; } }
-
 .tools {
   position: relative;
   display: grid;
@@ -558,7 +662,7 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   justify-content: center;
-  margin: 1.9rem; }
+  margin: 1rem; }
   @media only screen and (max-width: 37.5em) {
     .tools {
       margin: 0; } }
@@ -587,7 +691,7 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   justify-content: center;
-  margin: 1.9rem; }
+  margin: 1rem; }
   @media only screen and (max-width: 37.5em) {
     .logs {
       margin: 0; } }

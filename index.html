@@ -17,16 +17,17 @@
           <h1 class="header__logo">BlackBox</h1>
         </a>
         <div class="header__user">
-          <img
-            class="header__user--img"
-            src="img/user.png"
-            width="35"
-            alt="admin"
-          />
           <h2 class="header__user--title">Harry Potter</h2>
-          <svg class="medium-svg">
+          <svg class="medium-svg" fill="#E4E4E4">
             <use xlink:href="img/blackbox.svg#arrow-down"></use>
           </svg>
+          <div class="header__user--dropdown">
+            <ul>
+              <li>Jobs</li>
+              <li>Edit Profile</li>
+              <li>Log Out</li>
+            </ul>
+          </div>
         </div>
       </header>
 
@@ -111,46 +112,94 @@
       <section class="jobs">
         <div class="job">
           <div class="job__status">
-            <h3 class="job__status--to-do">To do</h3>
+            <h3 class="job__status--to-do">To-Do</h3>
             <svg class="small-svg">
               <use xlink:href="img/blackbox.svg#filter_list"></use>
             </svg>
           </div>
-          <div class="job__status-list job__status-list--add">
+          <div class="job__status-list">
             <svg class="big-svg job__status-list--priority" fill="#D80027">
               <title>High Priority</title>
               <use xlink:href="img/blackbox.svg#arrow-up-red"></use>
             </svg>
             <div class="job__status-list--text">
               <h2>Job#1</h2>
-              <p>Not initiated</p>
+              <p>Not initialised</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--add">
+          <div class="job__status-list">
             <svg class="big-svg job__status-list--priority" fill="#FB7925">
               <title>Medium Priority</title>
               <use xlink:href="img/blackbox.svg#arrow-up-red"></use>
             </svg>
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>Not initiated</p>
+              <h2>Job#2</h2>
+              <p>Initalised</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--add">
+          <div class="job__status-list">
             <svg
               class="big-svg job__status-list--priority"
               fill="#686868"
@@ -160,69 +209,167 @@
               <use xlink:href="img/blackbox.svg#arrow-up-red"></use>
             </svg>
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>Not initiated</p>
+              <h2>Job#3</h2>
+              <p>Underway</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
           <div class="job__status-add">
-            <a href="#" class="job__status-add--btn">
-              <svg class="small-svg">
+            <a href="#" class="job__status-add--btn"
+              ><svg class="small-svg">
                 <use xlink:href="img/blackbox.svg#add"></use>
               </svg>
-              <h3>Add Job</h3>
-            </a>
+              <h3>Add Job</h3></a
+            >
           </div>
         </div>
         <div class="job">
           <div class="job__status">
-            <h3 class="job__status--progress">In progress</h3>
+            <h3 class="job__status--progress">In Progress</h3>
             <svg class="small-svg">
               <use xlink:href="img/blackbox.svg#filter_list"></use>
             </svg>
           </div>
-          <div class="job__status-list job__status-list--progress">
+          <div class="job__status-list">
             <div class="job__status-list--text">
               <h2>Job#1</h2>
               <p>55% completed</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--progress">
+          <div class="job__status-list">
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>55% completed</p>
+              <h2>Job#2</h2>
+              <p>75% completed</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--progress">
+          <div class="job__status-list">
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>55% completed</p>
+              <h2>Job#3</h2>
+              <p>85% completed</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="job">
@@ -232,46 +379,120 @@
               <use xlink:href="img/blackbox.svg#filter_list"></use>
             </svg>
           </div>
-          <div class="job__status-list job__status-list--done">
+          <div class="job__status-list">
             <div class="job__status-list--text">
               <h2>Job#1</h2>
-              <p>Feb 7th, 2022</p>
+              <p>Feb 22, 2022</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--done">
+          <div class="job__status-list">
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>Feb 7th, 2022</p>
+              <h2>Job#2</h2>
+              <p>Feb 23, 2020</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
-
-          <div class="job__status-list job__status-list--done">
+          <div class="job__status-list">
             <div class="job__status-list--text">
-              <h2>Job#1</h2>
-              <p>Feb 7th, 2022</p>
+              <h2>Job#3</h2>
+              <p>Feb 02, 2019</p>
             </div>
-            <svg class="small-svg job__status-list--delete">
-              <use xlink:href="img/blackbox.svg#delete"></use>
-            </svg>
-            <svg class="small-svg job__status-list--info">
-              <use xlink:href="img/blackbox.svg#error"></use>
-            </svg>
+            <div class="job__status-list--delete-info">
+              <input
+                type="radio"
+                name="delete"
+                id="delete-job"
+                style="display: none"
+              />
+              <label for="delete-job" class="job__status-list--delete">
+                <svg class="small-svg">
+                  <use xlink:href="img/blackbox.svg#delete"></use>
+                </svg>
+              </label>
+              <input
+                type="radio"
+                name="delete"
+                id="close-delete"
+                style="display: none"
+              />
+              <div class="job__delete-confirm">
+                <h2>Are You sure you want to delete?</h2>
+                <div class="job__delete-confirm--buttons">
+                  <span>Yes</span>
+                  <label for="close-delete">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              <svg class="small-svg job__status-list--info">
+                <use xlink:href="img/blackbox.svg#error"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- Body end -->
     </main>
   </body>

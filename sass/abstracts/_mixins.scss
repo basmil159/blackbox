@@ -41,7 +41,7 @@
 
 //for similar padding on all the body part of the dashboard
 @mixin dashboardbody {
-  margin: 1.9rem;
+  margin: 1rem;
   @include respond(phone) {
     margin: 0;
   }

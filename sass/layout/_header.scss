@@ -21,15 +21,43 @@
 
   &__user {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
     animation: moveInRightRough 1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
 
-    &--img {
-      margin-right: 0.5rem;
-      width: 3.2rem;
+    &:hover {
+      background-color: #f4f6fb;
+      h2 {
+        color: $color-primary;
+      }
+      svg {
+        fill: $color-primary;
+      }
+    }
 
-      @include respond(tab-port) {
-        width: 2.5rem;
+    &--dropdown {
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.08);
+      background-color: #f4f6fb;
+      position: absolute;
+      right: 0rem;
+      display: none;
+      top: 100%;
+      width: 100%;
+      ul {
+        list-style: none;
+        li {
+          padding: 1rem;
+          color: $color-grey-dark;
+          font-size: 1.5rem;
+          &:hover {
+            background-color: $color-primary;
+            color: #fff;
+          }
+        }
       }
     }
     &--title {
@@ -38,4 +66,9 @@
       font-weight: normal;
     }
   }
+}
+
+.header__user:hover .header__user--dropdown,
+.header__user:hover .header__user--dropdown {
+  display: block;
 }

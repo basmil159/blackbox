@@ -1,3 +1,58 @@
+.jobs {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+  overflow: auto;
+  @include dashboardbody;
+
+  &__delete-confirm {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 50rem;
+    background-color: $color-grey-light;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    &--buttons {
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+
+      button {
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        padding: 0.5rem 1.5rem;
+        background-color: $color-primary;
+
+        &:hover {
+          background-color: #00568e;
+        }
+
+        &:active {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+  }
+}
+
 .job {
   animation: moveInRight 1s ease-in-out;
   height: 100%;
@@ -5,6 +60,54 @@
   padding: 1.5rem 2rem;
 
   border: 1px solid #e4e4e4;
+
+  &__delete-confirm {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 50rem;
+    background-color: $color-grey-light;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    &--buttons {
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        background-color: $color-primary;
+
+        &:hover {
+          background-color: #00568e;
+        }
+
+        &:active {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+  }
 
   &__status {
     display: flex;
@@ -47,19 +150,10 @@
     border: 1px solid #e4e4e4;
     box-sizing: border-box;
     border-radius: 8px;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     row-gap: 1.2rem;
-    grid-template-rows: repeat(2, 1fr);
     min-height: 8.7rem;
-
-    &--add {
-      grid-template-columns: min-content 1fr min-content;
-    }
-
-    &--progress,
-    &--done {
-      grid-template-columns: 1fr min-content;
-    }
 
     &--priority,
     &--text {
@@ -67,6 +161,20 @@
       justify-self: start;
       margin-right: 1rem;
       grid-row: 1/-1;
+    }
+
+    &--text {
+      display: block;
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+
+    &--delete-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     &--text {
@@ -104,4 +212,10 @@
       }
     }
   }
+}
+.job #delete-job:checked ~ .job__delete-confirm {
+  display: flex;
+}
+.job #close-delete:checked ~ .job__delete-confirm {
+  display: none;
 }
